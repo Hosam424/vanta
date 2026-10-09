@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+
+*{
+    /* text-decoration: none; */
+    font-family: "Bricolage Grotesque", sans-serif;
+    scroll-behavior: smooth;
+    /* user-select:none; */
+}
+
+
+body{
+    overflow-x: hidden;
+}
+
+.menu-btn{
+    width: 35px;
+    height: 14px;
+    position: relative;
+    cursor: pointer;
+}
+.menu-btn span{
+    height: 2.5px;
+    width: 100%;
+    background: #000;
+    position: absolute;
+    border-radius: 8px;
+    right: 0;
+    transition: .3s ease-in-out ;
+}
+
+.menu-btn span:first-child{
+    top: 0px;
+}
+
+.menu-btn span:last-child{
+    top: 7px;
+    transition-delay: .13s;
+}
+
+.menu-btn:hover span:first-child{
+    width: 40%;
+}
+.menu-btn:hover span:last-child{
+    width:50%;
+    transition-delay: .13s;
+}
+
+
+.hero-text{
+    color: transparent;
+    background: linear-gradient(
+          to bottom,
+        #ffffff 0%,
+        #d9d9d9 30%,
+        #8a8a8a 55%,
+        #303030 80%,
+        #000000 100%
+    );    
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.hero-title {
+    color: transparent;
+     background: linear-gradient(
+        to left,
+        #d9d9d9,
+        #8a8a8a,
+        #303030
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.links-holder a{
+    position: relative;
+    transition: .3s;
+}
+.links-holder a::before{
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 0%;
+    background: white;
+    bottom: 0;
+    left: 0;
+    opacity: .8;
+    transition: .4s ease-in-out;
+}
+.links-holder a:hover::before{
+    width: 100%;
+}
+
+.links-holder a:hover{
+    opacity: .8;
+}
+
+.links-holder a svg{
+   opacity: 0;
+   transition: .1s ease-in;
+}
+.links-holder a:hover svg{
+    opacity: 1;
+}
+i{
+    cursor: pointer;
+}
+
+.menu-img{
+    clip-path: inset(100% 0 0 0);
+}
+.about-overlay {
+    flex: 1 0 calc(100% / 12 + 1px);
+    margin-right: -1px;
+}
+
+.protection-img{
+    filter: grayscale(1);
+}
+
+@media (max-width: 640px) {
+    .about-overlay {
+        flex: 1 0 calc(100% / 7 + 1px);
+    }
+}
